@@ -2,6 +2,9 @@
   "name": "pathfinder",
   "module": "index.ts",
   "type": "module",
+  "scripts": {
+    "build:wasm": "mkdir -p dist && zig build-exe src/main.zig -target wasm32-freestanding -fno-entry --export=add -femit-bin=dist/main.wasm"
+  },
   "devDependencies": {
     "@types/bun": "latest"
   },
